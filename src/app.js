@@ -12,8 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use('/api/');
-
 const pizzas = [
   { name: 'Basca', flavor: 'meat and vegetables', price: 50.40 },
   { name: 'Pepperoni', flavor: 'Pepperoni and herbs', price: 44.70 }
@@ -33,11 +31,11 @@ const validateId = (req, res, next) => {
   return next();
 }
 
-app.get('/pizzas', (req, res) => {
+app.get('/api/pizzas', (req, res) => {
   return res(pizzas);
 });
 
-app.post('/pizzas', (req, res) => {
+app.post('/api/pizzas', (req, res) => {
   const { name, flavor, price } = req.body;
 
   const payload = {
@@ -51,7 +49,7 @@ app.post('/pizzas', (req, res) => {
   return res(payload);
 });
 
-app.put('/pizzas/:id', validateId, (req, res) => {
+app.put('/api/pizzas/:id', validateId, (req, res) => {
   const { index } = res
   const { name, flavor, price } = req.body
 
@@ -67,10 +65,12 @@ app.put('/pizzas/:id', validateId, (req, res) => {
   return res(payload);
 });
 
-app.delete('/pizzas/:id', validateId, (req, res) => {
+app.delete('/api/pizzas/:id', validateId, (req, res) => {
   const { index } = res
   pizzas.splice(index, 1);
   return res.status(204);
 });
 
-app.listen(PORT, HOST);
+app.listen(PORT, HOST, () => {
+  console.log(`Server is listening on ${PORT} port`);
+});
