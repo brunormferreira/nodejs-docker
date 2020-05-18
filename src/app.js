@@ -4,8 +4,9 @@ const { uuid } = require('uuidv4');
 const app = express();
 
 const PORT = 3333;
-const HOST = "0.0.0.0";
+const HOST = '0.0.0.0';
 
+app.use(express.json());
 app.use(cors());
 
 const pizzas = [

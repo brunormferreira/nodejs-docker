@@ -22,7 +22,6 @@ $ sudo docker-compose up # > up container
 - nodemon;
 - express;
 - cors;
-- body-parser;
 
 ## HTTP methods
 
@@ -56,10 +55,10 @@ Sample Response
 Sample Response
 ```json
 {
-  "id": "uuid()",
+  "id": "01dac858-cf38-4b8a-885d-ad2af6c03653",
   "name": "Pepperoni",
   "flavor": "Pepperoni and herbs",
-  "price": 44.70
+  "price": 44.80
 }
 ```
 ---
