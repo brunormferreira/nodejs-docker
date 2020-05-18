@@ -12,6 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+app.use('/api/');
+
 const pizzas = [
   { name: 'Basca', flavor: 'meat and vegetables', price: 50.40 },
   { name: 'Pepperoni', flavor: 'Pepperoni and herbs', price: 44.70 }
