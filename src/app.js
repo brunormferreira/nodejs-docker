@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-// const routes = require('./routes/routes.js');
 const { uuid } = require('uuidv4');
 const app = express();
 
