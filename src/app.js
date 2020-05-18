@@ -1,6 +1,5 @@
 const express = require('express');
-const cors = require("cors");
-const bodyParser = require('body-parser');
+const cors = require('cors');
 // const routes = require('./routes/routes.js');
 const { uuid } = require('uuidv4');
 const app = express();
@@ -8,8 +7,6 @@ const app = express();
 const PORT = 3333;
 const HOST = "0.0.0.0";
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 const pizzas = [
@@ -32,7 +29,7 @@ const validateId = (req, res, next) => {
 }
 
 app.get('/api/pizzas', (req, res) => {
-  return res(pizzas);
+  return res.json(pizzas);
 });
 
 app.post('/api/pizzas', (req, res) => {
@@ -46,7 +43,7 @@ app.post('/api/pizzas', (req, res) => {
   };
 
   pizzas.push(payload);
-  return res(payload);
+  return res.json(payload);
 });
 
 app.put('/api/pizzas/:id', validateId, (req, res) => {
@@ -62,13 +59,13 @@ app.put('/api/pizzas/:id', validateId, (req, res) => {
 
   pizzas[index] = payload;
 
-  return res(payload);
+  return res.json(payload);
 });
 
 app.delete('/api/pizzas/:id', validateId, (req, res) => {
   const { index } = res
   pizzas.splice(index, 1);
-  return res.status(204);
+  return res.status(204).send();
 });
 
 app.listen(PORT, HOST, () => {
