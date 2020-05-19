@@ -82,9 +82,7 @@ Sample Response
 |:--|:--|
 |/api/pizzas/:id|DELETE|
 
-Sample Response
-```json
-{
-  "status": 204
-}
+No Response
+```js
+Only status 204.
 ```
