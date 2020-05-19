@@ -35,6 +35,12 @@ $ sudo docker build # > rebuild image
 $ sudo docker-compose up # > up container
 ```
 
+- Or run only
+
+```sh
+$ docker-compose up --build
+```
+
 ## Packages
 
 - uuidv4;
