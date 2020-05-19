@@ -70,7 +70,7 @@ Sample Response
 Sample Response
 ```json
 {
-  "id": "uuid()",
+  "id": "01dac858-cf38-4b8a-885d-ad2af6c03653",
   "name": "Chesse",
   "flavor": "Cheese and Pepperoni",
   "price": 51.20
