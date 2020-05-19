@@ -1,8 +1,27 @@
 # nodejs-docker
 
+<p align="center">
+  <img src="https://d262ilb51hltx0.cloudfront.net/max/1600/1*_MtS4HqN2srTcrSyet61DQ.jpeg" width="700">
+  <div align="center">
+  <a href="https://insomnia.rest/run/"><img src="https://img.shields.io/badge/insomnia-run--in--insomnia-purple.svg?logo=insomnia&style=flat-square&color=6a57d5" alt="run-in-insomnia" /></a>
+  <img src="https://camo.githubusercontent.com/2485e7b2f51f9b6bd3e5e216cb2bd1c159cd21b4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f7665726167652d3130302532352d677265656e2e737667" alt="100% coverage" />
+  <img src="https://img.shields.io/github/stars/brunormferreira/nodejs-docker?style=social" alt="stars" />
+  </div>
+</p>
+
 - A basic example to create an api with [Nodejs](https://nodejs.org/en/) and containering with [Docker](https://www.docker.com/).
 
+- Tests API Calls with [Insomnia REST Client](https://insomnia.rest/).
+
 - Pizza API. :P
+
+
+## Table of Contents
+
+- [Docker](#docker)
+- [Packages](#packages)
+- [HTTP Methods](#http-methods)
+- [API Reference](#api-reference)
 
 ## Docker
 
